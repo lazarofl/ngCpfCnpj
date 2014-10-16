@@ -51,7 +51,7 @@ module.exports = function (grunt) {
         options: {
           open: true,
           base: [
-            '.tmp',
+            'dist',
             '<%= yeoman.app %>'
           ]
         }
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         options: {
           port: 9001,
           base: [
-            '.tmp',
+            'dist',
             'test',
             '<%= yeoman.app %>'
           ]
@@ -90,13 +90,12 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-            '.tmp',
             '<%= yeoman.dist %>/*',
             '!<%= yeoman.dist %>/.git*'
           ]
         }]
       },
-      server: '.tmp'
+      server: 'dist'
     },
 
     // Renames files for browser caching purposes
@@ -116,9 +115,8 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/concat/scripts',
-          src: '*.js',
-          dest: '.tmp/concat/scripts'
+          src: '<%= yeoman.app %>/scripts/*.js',
+          dest: 'ngCpfCnpj.js'
         }]
       }
     },
@@ -129,7 +127,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           dot: true,
-          cwd: '.tmp/scripts',
+          cwd: '<%= yeoman.app %>/scripts',
           dest: '<%= yeoman.dist %>',
           src: [
             '*.js'
@@ -145,7 +143,7 @@ module.exports = function (grunt) {
     //   dist: {
     //     files: {
     //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
+    //         'dist/styles/{,*/}*.css',
     //         '<%= yeoman.app %>/styles/{,*/}*.css'
     //       ]
     //     }
@@ -153,12 +151,9 @@ module.exports = function (grunt) {
     // },
     uglify: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'src/js',
-          src: '**/*.js',
-          dest: 'dest/js'
-        }]
+        files: {
+        '<%= yeoman.dist %>/ngCpfCnpj.min.js': ['<%= yeoman.app %>/scripts/ngCpfCnpj.js']
+        }
       }
     },
 
@@ -173,15 +168,7 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('serve', function (target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
-    }
-
-    grunt.task.run([
-      'clean:server',
-      'connect:livereload',
-      'watch'
-    ]);
+    return grunt.task.run(['build', 'connect:dist:keepalive']);
   });
 
   grunt.registerTask('server', function () {
