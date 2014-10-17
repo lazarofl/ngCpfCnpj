@@ -116,7 +116,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           src: '<%= yeoman.app %>/scripts/*.js',
-          dest: 'ngCpfCnpj.js'
+          dest: '<%= yeoman.dist %>'
         }]
       }
     },
@@ -184,7 +184,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'ngmin',
     'copy:dist',
     'uglify',
     'rev'
