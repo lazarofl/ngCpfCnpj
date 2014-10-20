@@ -1,7 +1,10 @@
 {
   "name": "ng-cpf-cnpj",
-  "version": "0.0.0",
-  "main": "dist/ngCpfCnpj.js",
+  "version": "1.0.0",
+  "main": [
+    "dist/ngCpfCnpj.js",
+    "dist/ngCpfCnpj.min.js"
+    ],
   "ignore": [
     "**/.*",
     "app",
