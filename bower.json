@@ -4,7 +4,7 @@
   "main": "dist/ngCpfCnpj.js",
   "ignore": [
     "**/.*",
-    "app", 
+    "app",
     "test"
   ],
   "dependencies": {
@@ -14,7 +14,8 @@
     "angular-resource": "1.2.4",
     "angular-cookies": "1.2.4",
     "angular-sanitize": "1.2.4",
-    "angular-route": "1.2.4"
+    "angular-route": "1.2.4",
+    "cpf_cnpj": "~0.0.4"
   },
   "devDependencies": {
     "angular-mocks": "1.2.4",
