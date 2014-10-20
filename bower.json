@@ -15,6 +15,8 @@
     ".jshintrc",
     "bower.json",
     "gruntfile.js",
+    "Gruntfile.js",
+    "karma.conf.js",
     "package.json",
     "README.md",
     "test"
