@@ -5,9 +5,6 @@
       frameworks: ['jasmine'],
       files: [
         'app/bower_components/angular/angular.js',
-        'app/bower_components/angular-cookies/angular-cookies.js',
-        'app/bower_components/angular-resource/angular-resource.js',
-        'app/bower_components/angular-sanitize/angular-sanitize.js',
         'app/bower_components/angular-mocks/angular-mocks.js',
         'app/bower_components/cpf_cnpj/build/cnpj.js',
         'app/bower_components/cpf_cnpj/build/cpf.js',

@@ -5,14 +5,18 @@
     "Lazaro F Lima <lazaro.fl@gmail.com>"
   ],
   "description": "Diretiva para validar CPF ou CNPJ",
-  "main": [
-    "dist/ngCpfCnpj.js",
-    "dist/ngCpfCnpj.min.js"
-    ],
+  "main": "dist/*.js",
   "ignore": [
     "**/.*",
     "app",
-    "node_modules",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "README.md",
     "test"
   ],
   "dependencies": {

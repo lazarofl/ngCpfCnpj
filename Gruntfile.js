@@ -124,15 +124,26 @@ module.exports = function (grunt) {
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>/scripts',
-          dest: '<%= yeoman.dist %>',
-          src: [
-            '*.js'
-          ]
-        }]
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>/scripts',
+            dest: '<%= yeoman.dist %>',
+            src: [
+              '*.js'
+            ]
+          },
+          {
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>/bower_components/cpf_cnpj/build',
+            dest: '<%= yeoman.dist %>',
+            src: [
+              '*.min.js'
+            ]
+          }
+        ]
       }
     },
 
