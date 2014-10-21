@@ -8,7 +8,7 @@ Instalação
 ==============
 
 ```sh
-bower install ngCpfCnpj
+bower install ng-cpfcnpj --save
 ```
 
 Utilização
